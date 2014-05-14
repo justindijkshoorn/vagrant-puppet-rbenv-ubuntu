@@ -10,6 +10,7 @@ if $operatingsystem == 'Ubuntu' {
 	include mysql
 	include rbenv
 	include ruby-build
+	include nodejs
 } else {
 	warning("I dont know what to think about ${operatingsystem}. Its a ${osfamily}, isnt it? We need Ubuntu!")
 }

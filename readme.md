@@ -54,13 +54,11 @@ And now for the moment of truth. Let's create your Rails application
 Be sure your rails server is running within the vagrant box ...
 
 ## Note: NodeJS
-Since Rails ships with so many dependencies these days, we're going to need to install a Javascript runtime like NodeJS. This lets you use Coffeescript and the Asset Pipeline in Rails which combines and minifies your javascript to provide a faster production environment.
-
-To install NodeJS, add it using a PPA repository
-
-	$ sudo add-apt-repository ppa:chris-lea/node.js
-	$ sudo apt-get update
-	$ sudo apt-get install nodejs
+Since Rails ships with so many dependencies these days Javascript runtime NodeJS is installed. This lets you use Coffeescript and the Asset Pipeline in Rails which combines and minifies your javascript to provide a faster production environment.
 
 ## Note: RBENV build failed on Ubuntu 14.04
-Because Ubuntu 14.04 is probably shipping with readline 6.3, which uses rl_hook_func_t instead of Function. This bug has already been reported and fixed in Ruby (https://bugs.ruby-lang.org/issues/9578), but not released yet. Until Ruby 2.1.2 comes out (which I assume will contain this fix) Ubuntu 12.04 is used.
+
+    # Bug has been fixed for ruby >= 2.0.0 !
+    # Ubuntu 14.04 is used ...
+
+~~Because Ubuntu 14.04 is probably shipping with readline 6.3, which uses rl_hook_func_t instead of Function. This bug has already been reported and fixed in Ruby (https://bugs.ruby-lang.org/issues/9578), but not released yet. Until Ruby 2.1.2 comes out (which I assume will contain this fix) Ubuntu 12.04 is used.~~
