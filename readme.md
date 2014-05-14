@@ -16,8 +16,8 @@ After running the above command (vagrant up), you'll have a fully running virtua
 ## Install ruby using rbenv
 SSH into your Vagrant box and run the following commands
 
-	$ rbenv install 2.1.1
-	$ rbenv global 2.1.1
+	$ rbenv install 2.1.2
+	$ rbenv global 2.1.2
 
 The installation could take a while ...
 
