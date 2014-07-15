@@ -39,6 +39,8 @@ And now for the moment of truth. Let's create your Rails application
 	$ rails new myapp
 
 	# If you want to use MySQL
+	$ MySql username: root
+	$ MySql password is unset use the following command to set: sudo mysqladmin -uroot password yourpassword
 	$ rails new myapp -d mysql
 
 	# Create the database
