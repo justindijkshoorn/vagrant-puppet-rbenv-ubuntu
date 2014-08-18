@@ -16,4 +16,10 @@ class mysql {
 		command => 'mysqladmin -uroot password $mysqlpw',
 		require => Service['mysql']
 	}
+
+	$mysqlPackages = ['libmysqlclient-dev']
+	package { $mysqlPackages:
+		ensure => installed,
+		require => Class['system-update']
+	}
 }

@@ -26,28 +26,36 @@ After you've installed ruby via rbenv you can install the rails gem
 
 	$ gem install rails
 
-If you're using rbenv, you'll need to run the following command to make the rails executable available
+If you're using rbenv, you'll need to run the following command (also after installing new gems) to make the rails executable (gems) available
 
 	$ rbenv rehash
+
+###### Note: Never run rbenv rehash again. This rbenv plugin automatically runs rbenv rehash every time you install or uninstall a gem. For more information see: [https://github.com/sstephenson/rbenv-gem-rehash](https://github.com/sstephenson/rbenv-gem-rehash)
+
+	$ git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
 
 Now that you've installed Rails, you can run the rails -v command to make sure you have everything installed correctly
 
 	$ rails -v
 
-And now for the moment of truth. Let's create your Rails application
+And now for the moment of truth. Let's create your Rails application (inside vagrant Synced folder)
 
+	$ cd vagrant-data/
 	$ rails new myapp
 
 	# If you want to use MySQL
 	# MySql username: root
 	# MySql password is unset use the following command to set: sudo mysqladmin -uroot password yourpassword
-	
+
 	$ rails new myapp -d mysql
 
 	# Create the database
 	$ rake db:create
 
 	$ rails server -e development
+
+###### Note: Socket in rails config/database.yml should be set to:
+	/var/run/mysqld/mysqld.sock
 
 ## Vagrant Synced folders
 [Synced folders](http://docs.vagrantup.com/v2/synced-folders/index.html) is enabled to sync a folder on the host machine to the guest machine, allowing you to continue working on your project's files on your host machine, but use the resources in the guest machine to compile or run your project. You can see the working folder when you point your browser to
