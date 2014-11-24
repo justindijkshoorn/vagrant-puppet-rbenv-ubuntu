@@ -9,7 +9,7 @@ When installed navigate to the vagrant-puppet-lamp-ubuntu folder and run the fol
 
 This will automatically download the latest ubuntu server version for you from
 
-	$ https://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-i386-vagrant-disk1.box
+	$ https://cloud-images.ubuntu.com/vagrant/utopic/current/utopic-server-cloudimg-i386-vagrant-disk1.box
 
 After running the above command (vagrant up), you'll have a fully running virtual machine in VirtualBox running the latest Ubuntu Server 32-bit with a pre-installed RBENV stack. You can SSH into this machine with vagrant ssh, and when you're done playing around, you can remove all traces of it with vagrant destroy.
 
@@ -67,9 +67,9 @@ Be sure your rails server is running within the vagrant box ...
 ## Note: NodeJS
 Since Rails ships with so many dependencies these days Javascript runtime NodeJS is installed. This lets you use Coffeescript and the Asset Pipeline in Rails which combines and minifies your javascript to provide a faster production environment.
 
-## Note: RBENV build failed on Ubuntu 14.04
+## Note: RBENV build failed on Ubuntu 14.10
 
     # Bug has been fixed for ruby >= 2.0.0 !
-    # Ubuntu 14.04 is used ...
+    # Ubuntu 14.10 is used ...
 
-~~Because Ubuntu 14.04 is probably shipping with readline 6.3, which uses rl_hook_func_t instead of Function. This bug has already been reported and fixed in Ruby (https://bugs.ruby-lang.org/issues/9578), but not released yet. Until Ruby 2.1.2 comes out (which I assume will contain this fix) Ubuntu 12.04 is used.~~
+~~Because Ubuntu 14.10 is probably shipping with readline 6.3, which uses rl_hook_func_t instead of Function. This bug has already been reported and fixed in Ruby (https://bugs.ruby-lang.org/issues/9578), but not released yet. Until Ruby 2.1.2 comes out (which I assume will contain this fix) Ubuntu 12.04 is used.~~
