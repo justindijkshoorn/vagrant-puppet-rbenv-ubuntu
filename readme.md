@@ -67,6 +67,9 @@ Be sure your rails server is running within the vagrant box ...
 ## Note: NodeJS
 Since Rails ships with so many dependencies these days Javascript runtime NodeJS is installed. This lets you use Coffeescript and the Asset Pipeline in Rails which combines and minifies your javascript to provide a faster production environment.
 
+## Note: NFS
+If you are using Vagrant and facing performance hits while running web-server or unit tests, the solution can be using NFS. It is used for sharing folders between host and guest machines. Vagrant uses VirtualBox default sharing mechanism, which is very slow. After you'll switch to NFS, file access speed will increase by ~ 10 - 100 times. More information can be found in the [https://docs.vagrantup.com/v2/synced-folders/nfs.html](Vagrant docs).
+
 ## Note: RBENV build failed on Ubuntu 14.10
 
     # Bug has been fixed for ruby >= 2.0.0 !
