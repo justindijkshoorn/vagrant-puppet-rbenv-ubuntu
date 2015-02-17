@@ -64,6 +64,15 @@ And now for the moment of truth. Let's create your Rails application (inside vag
 
 Be sure your rails server is running within the vagrant box ...
 
+## Note: Vagrant Synced folders - Timezone
+If u use Vagrant Synced folders be sure the Vagrant box and local machine have the same time. To check the current time use
+
+	$ date
+
+To change the timezone for Ubuntu (Vagrant box) use the following command and follow on screen instructions
+
+	$ sudo dpkg-reconfigure tzdata
+
 ## Note: NodeJS
 Since Rails ships with so many dependencies these days Javascript runtime NodeJS is installed. This lets you use Coffeescript and the Asset Pipeline in Rails which combines and minifies your javascript to provide a faster production environment.
 
