@@ -65,7 +65,7 @@ And now for the moment of truth. Let's create your Rails application (inside vag
 Be sure your rails server is running within the vagrant box ...
 
 ## Note: Vagrant Synced folders - Timezone
-If u use Vagrant Synced folders be sure the Vagrant box and local machine have the same time. To check the current time use
+If you use Vagrant Synced folders be sure the Vagrant box and local machine have the same time. To check the current time use
 
 	$ date
 
