@@ -85,12 +85,6 @@ You can symlink the "mysql.sock" if necessary and run it when the virtual machin
 	$ /etc/rc.local
 	$ ln -s /var/run/mysqld/mysqld.sock /tmp/mysql.sock
 
-## Note: Symlink mysql.sock
-You can symlink the "mysql.sock" if necessary and run it when the virtual machine boots
-	
-	$ /etc/rc.local
-	$ ln -s /var/run/mysqld/mysqld.sock /tmp/mysql.sock
-
 ## Note: Rails server binding
 You have to run the rails server with the following bind adress:
 	
