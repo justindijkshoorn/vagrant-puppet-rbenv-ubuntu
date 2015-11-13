@@ -79,6 +79,23 @@ Since Rails ships with so many dependencies these days Javascript runtime NodeJS
 ## Note: NFS
 If you are using Vagrant and facing performance hits while running web-server or unit tests, the solution can be using NFS. It is used for sharing folders between host and guest machines. Vagrant uses VirtualBox default sharing mechanism, which is very slow. After you'll switch to NFS, file access speed will increase by ~ 10 - 100 times. More information can be found in the [https://docs.vagrantup.com/v2/synced-folders/nfs.html](Vagrant docs).
 
+## Note: Symlink mysql.sock
+You can symlink the "mysql.sock" if necessary and run it when the virtual machine boots
+	
+	$ /etc/rc.local
+	$ ln -s /var/run/mysqld/mysqld.sock /tmp/mysql.sock
+
+## Note: Symlink mysql.sock
+You can symlink the "mysql.sock" if necessary and run it when the virtual machine boots
+	
+	$ /etc/rc.local
+	$ ln -s /var/run/mysqld/mysqld.sock /tmp/mysql.sock
+
+## Note: Rails server binding
+You have to run the rails server with the following bind adress:
+	
+	$ rails s -b 0.0.0.0
+
 ## Note: RBENV build failed on Ubuntu 14.10
 
     # Bug has been fixed for ruby >= 2.0.0 !
